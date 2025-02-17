@@ -1,11 +1,20 @@
-package com.ruander;
+package com.ruander.alakzatok;
 
 public abstract class  FemAlakzat {
-    public static double getFajsuly() {
-        return 0;
+    private static double fajsuly= 1.2;
+
+    public FemAlakzat() {
+        this.fajsuly=fajsuly;
     }
 
+    public static double getFajsuly() {
+        return fajsuly;
+    }
+
+    public abstract double terfogat();
+
+
     public double suly() {
-        return 0;
+        return terfogat() * FemAlakzat.fajsuly;
     }
 }
